@@ -15,3 +15,7 @@ path = "src/reference.rs"
 [[bin]]
 name = "pointer"
 path = "src/pointer.rs"
+
+[[bin]]
+name = "tuple"
+path = "src/structures/tuple.rs"
