@@ -23,3 +23,7 @@ path = "src/structures/tuple.rs"
 [[bin]]
 name = "array"
 path = "src/structures/array.rs"
+
+[[bin]]
+name = "slice"
+path = "src/structures/slice.rs"
