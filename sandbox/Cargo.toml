@@ -31,3 +31,7 @@ path = "src/structures/slice.rs"
 [[bin]]
 name = "str_slice"
 path = "src/structures/str_slice.rs"
+
+[[bin]]
+name = "box"
+path = "src/types/box.rs"
