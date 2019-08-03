@@ -27,3 +27,7 @@ path = "src/structures/array.rs"
 [[bin]]
 name = "slice"
 path = "src/structures/slice.rs"
+
+[[bin]]
+name = "str_slice"
+path = "src/structures/str_slice.rs"
