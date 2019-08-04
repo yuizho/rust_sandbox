@@ -33,5 +33,9 @@ name = "str_slice"
 path = "src/structures/str_slice.rs"
 
 [[bin]]
+name = "vector"
+path = "src/structures/vector.rs"
+
+[[bin]]
 name = "box"
 path = "src/types/box.rs"
