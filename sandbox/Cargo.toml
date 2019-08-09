@@ -47,3 +47,7 @@ path = "src/types/string.rs"
 [[bin]]
 name = "option"
 path = "src/types/option.rs"
+
+[[bin]]
+name = "result"
+path = "src/types/result.rs"
