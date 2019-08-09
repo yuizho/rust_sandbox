@@ -39,3 +39,7 @@ path = "src/structures/vector.rs"
 [[bin]]
 name = "box"
 path = "src/types/box.rs"
+
+[[bin]]
+name = "string"
+path = "src/types/string.rs"
