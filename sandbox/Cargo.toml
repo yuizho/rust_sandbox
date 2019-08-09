@@ -51,3 +51,7 @@ path = "src/types/option.rs"
 [[bin]]
 name = "result"
 path = "src/types/result.rs"
+
+[[bin]]
+name = "type_alias"
+path = "src/types/type_alias.rs"
