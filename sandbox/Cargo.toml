@@ -63,3 +63,7 @@ path = "src/types/struct.rs"
 [[bin]]
 name = "enum"
 path = "src/types/enum.rs"
+
+[[bin]]
+name = "value_scope"
+path = "src/ownership/value_scope.rs"
