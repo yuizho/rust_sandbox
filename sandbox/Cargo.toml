@@ -59,3 +59,7 @@ path = "src/types/type_alias.rs"
 [[bin]]
 name = "struct"
 path = "src/types/struct.rs"
+
+[[bin]]
+name = "enum"
+path = "src/types/enum.rs"
