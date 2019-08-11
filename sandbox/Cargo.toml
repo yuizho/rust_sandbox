@@ -71,3 +71,7 @@ path = "src/ownership/value_scope.rs"
 [[bin]]
 name = "borrowing"
 path = "src/ownership/borrowing.rs"
+
+[[bin]]
+name = "toy_vec"
+path = "src/ownership/toy_vec.rs"
