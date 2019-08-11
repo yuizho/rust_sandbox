@@ -67,3 +67,7 @@ path = "src/types/enum.rs"
 [[bin]]
 name = "value_scope"
 path = "src/ownership/value_scope.rs"
+
+[[bin]]
+name = "borrowing"
+path = "src/ownership/borrowing.rs"
