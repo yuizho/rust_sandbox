@@ -5,7 +5,11 @@ fn main() {
     v.push("Budgerigar".to_string());
     println!("{:?}", v);
     let e = v.get(1);
-    assert_eq!(e, Some(&"Budgerigar".to_string()))
+    assert_eq!(e, Some(&"Budgerigar".to_string()));
+
+    let mut iter = v.iter();
+    assert_eq!(iter.next(), Some(&"Java Finch".to_string()));
+    v.push("Canary".to_string()); // iterはもう生存していないのでpush可
 }
 
 #[derive(Debug)]
@@ -53,6 +57,18 @@ impl<T: Default> ToyVec<T> {
         }
     }
 
+    pub fn pop(&mut self) -> Option<T> {
+        if self.len == 0 {
+            None
+        } else {
+            self.len -= 1;
+            // 借用(&mut self)経由では所有権は奪えないが、所有権を交換することはできる
+            // 第一引数の値を第二引数の値で置き換え、置き換え前の値を返す
+            let elem = std::mem::replace(&mut self.elements[self.len], Default::default());
+            Some(elem)
+        }
+    }
+
     fn grow(&mut self) {
         if self.capacity() == 0 {
             self.elements = Self::allocate_in_heap(1);
@@ -75,5 +91,38 @@ impl<T: Default> ToyVec<T> {
             .take(size) // T型のデフォルト値をsize個作る
             .collect::<Vec<_>>()
             .into_boxed_slice() // Box<[T]>に変換
+    }
+}
+
+pub struct Iter<'vec, T> {
+    elements: &'vec Box<[T]>,
+    len: usize,
+    pos: usize,
+}
+
+impl<T: Default> ToyVec<T> {
+    // selfとIter<T>のライフタイムが同一になった
+    // 本当はライフタイムを省略できる
+    pub fn iter<'vec>(&'vec self) -> Iter<'vec, T> {
+        Iter {
+            elements: &self.elements,
+            len: self.len,
+            pos: 0,
+        }
+    }
+}
+
+impl<'vec, T> Iterator for Iter<'vec, T> {
+    // 関連型(トレイトに関連した型)でnextの戻り値型とライフタイムを指定
+    type Item = &'vec T;
+    // 戻り値のライフタイムはIter<T>のライフタイムと同様
+    fn next(&mut self) -> Option<Self::Item> {
+        if self.pos >= self.len {
+            None
+        } else {
+            let res = Some(&self.elements[self.pos]);
+            self.pos += 1;
+            res
+        }
     }
 }
