@@ -83,3 +83,7 @@ path = "src/ownership/rc.rs"
 [[bin]]
 name = "refcell"
 path = "src/ownership/refcell.rs"
+
+[[bin]]
+name = "refcell_tls"
+path = "src/ownership/refcell_tls.rs"
