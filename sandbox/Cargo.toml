@@ -75,3 +75,7 @@ path = "src/ownership/borrowing.rs"
 [[bin]]
 name = "toy_vec"
 path = "src/ownership/toy_vec.rs"
+
+[[bin]]
+name = "rc"
+path = "src/ownership/rc.rs"
