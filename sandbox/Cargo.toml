@@ -79,3 +79,7 @@ path = "src/ownership/toy_vec.rs"
 [[bin]]
 name = "rc"
 path = "src/ownership/rc.rs"
+
+[[bin]]
+name = "refcell"
+path = "src/ownership/refcell.rs"
