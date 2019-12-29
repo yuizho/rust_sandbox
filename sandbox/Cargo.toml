@@ -10,6 +10,7 @@ edition = "2018"
 lazy_static = "1.2"
 spin_sleep = "0.3.7"
 termion = "1.5.4"
+notify-rust = "3.6.3"
 
 [[bin]]
 name = "reference"
@@ -110,3 +111,7 @@ path = "src/ownership/static_rwlock.rs"
 [[bin]]
 name = "timer"
 path = "src/thread/timer.rs"
+
+[[bin]]
+name = "notify"
+path = "src/crates/notify.rs"
