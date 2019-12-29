@@ -66,6 +66,10 @@ name = "enum"
 path = "src/types/enum.rs"
 
 [[bin]]
+name = "generics"
+path = "src/types/generics.rs"
+
+[[bin]]
 name = "value_scope"
 path = "src/ownership/value_scope.rs"
 
