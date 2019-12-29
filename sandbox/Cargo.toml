@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 lazy_static = "1.2"
+spin_sleep = "0.3.7"
 
 [[bin]]
 name = "reference"
@@ -70,6 +71,10 @@ name = "generics"
 path = "src/types/generics.rs"
 
 [[bin]]
+name = "trait"
+path = "src/types/trait.rs"
+
+[[bin]]
 name = "value_scope"
 path = "src/ownership/value_scope.rs"
 
@@ -100,3 +105,7 @@ path = "src/ownership/arc_rwlock.rs"
 [[bin]]
 name = "static_rwlock"
 path = "src/ownership/static_rwlock.rs"
+
+[[bin]]
+name = "timer"
+path = "src/thread/timer.rs"
