@@ -53,7 +53,7 @@ fn main() {
             }
             write!(
                 stdout,
-                "{}{}{}\u{1F345}  {}",
+                "{}{}{}\u{1F345} {}",
                 termion::cursor::Goto(2, 1),
                 color::Fg(color::Red),
                 clear::All,
@@ -67,7 +67,7 @@ fn main() {
 
         write!(
             stdout,
-            "{}{}{}\u{1F389}  press Enter to take a break",
+            "{}{}{}\u{1F389} press Enter to take a break",
             color::Fg(color::Green),
             clear::All,
             termion::cursor::Goto(2, 1)
@@ -107,7 +107,7 @@ fn main() {
             }
             write!(
                 stdout,
-                "{}{}{}\u{2615}  {}",
+                "{}{}{}\u{2615} {}",
                 termion::cursor::Goto(2, 1),
                 color::Fg(color::Green),
                 clear::All,
@@ -121,7 +121,8 @@ fn main() {
 
         write!(
             stdout,
-            "{}{}\u{1F514}  press Enter to work!!",
+            "{}{}{}\u{1F514} press Enter to work!!",
+            color::Fg(color::Red),
             termion::cursor::Goto(2, 1),
             clear::All,
         );
