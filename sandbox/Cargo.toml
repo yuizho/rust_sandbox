@@ -115,3 +115,7 @@ path = "src/thread/timer.rs"
 [[bin]]
 name = "notify"
 path = "src/crates/notify.rs"
+
+[[bin]]
+name = "trait_object"
+path = "src/oop/trait_object.rs"
