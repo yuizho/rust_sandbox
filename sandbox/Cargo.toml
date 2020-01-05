@@ -11,7 +11,6 @@ lazy_static = "1.2"
 spin_sleep = "0.3.7"
 termion = "1.5.4"
 notify-rust = "3.6.3"
-rodio = "0.10.0"
 
 [[bin]]
 name = "reference"
@@ -116,10 +115,6 @@ path = "src/thread/timer.rs"
 [[bin]]
 name = "notify"
 path = "src/crates/notify.rs"
-
-[[bin]]
-name = "play_back"
-path = "src/crates/play_back.rs"
 
 [[bin]]
 name = "trait_object"
