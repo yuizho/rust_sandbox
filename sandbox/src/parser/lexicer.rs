@@ -1,5 +1,5 @@
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
-struct Loc(usize, usize);
+pub struct Loc(usize, usize);
 impl Loc {
     fn merge(&self, other_loc: &Loc) -> Loc {
         use std::cmp::{max, min};
@@ -9,8 +9,8 @@ impl Loc {
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct Annot<T> {
-    value: T,
-    loc: Loc,
+    pub value: T,
+    pub loc: Loc,
 }
 impl<T> Annot<T> {
     fn new(value: T, loc: Loc) -> Self {
